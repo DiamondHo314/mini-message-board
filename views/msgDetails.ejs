@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/homeStyles.css">
+    <title>Document</title>
+</head>
+<body>
+   <div id="showMsg">
+    <!---
+    'messages' comes from the exported messages array from the messagesdb file
+    in that array, each message is an object with 3 properties: 'text', 'user' and 'added'
+    looping through all the objects, we display their properties within this div in the following way
+    'messages' is passed into this file through detailrouter.js which gets messages from requiring messagedb
+    -->
+        <% messages.forEach((msg) => { %>  
+            <% if(msg.user == usrname ){ %>
+                <p> "<%= msg.text %>" - <%= msg.user %> </p>
+                <p> <%= msg.added %> </p>
+            <% } %>
+        <% }) %>
+   </div> 
+   <footer>
+    <a href="/">home</a>
+    <a href="/form">leave a message</a>
+   </footer>
+</body>
+</html>
