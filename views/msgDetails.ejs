@@ -15,8 +15,8 @@
     'messages' is passed into this file through detailrouter.js which gets messages from requiring messagedb
     -->
         <% messages.forEach((msg) => { %>  
-            <% if(msg.user == usrname ){ %>
-                <p> "<%= msg.text %>" - <%= msg.user %> </p>
+            <% if(msg.username == usrname ){ %>
+                <p> "<%= msg.text %>" - <%= msg.username %> </p>
                 <p> <%= msg.added %> </p>
             <% } %>
         <% }) %>

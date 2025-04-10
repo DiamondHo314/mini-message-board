@@ -1,14 +1,16 @@
 const express = require('express')
-const { messages } = require('../messagesdb')
+//const { messages } = require('../messagesdb')
+const db = require('../db/queries')
 const router = express.Router()
 
-router.get('/', (req, res) =>{
-    res.render('msgDetails', { messages: messages })
+router.get('/', async (req, res) =>{
+    const msgs = await db.getAllDetails()
+    res.render('msgDetails', { messages: msgs })
 })
 
-router.get('/:user', (req, res) =>{
+router.get('/:user', async (req, res) =>{
     const { user }  = req.params
-    res.render('msgDetails', {messages: messages, usrname: user})
+    res.render('msgDetails', {messages: await db.getAllDetails(), usrname: user})
 })
 
 module.exports = router

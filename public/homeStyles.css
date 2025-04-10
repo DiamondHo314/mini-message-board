@@ -37,6 +37,10 @@ footer{
     padding-top: 70px;
 }
 
+a {
+    color: yellow;
+}
+
 #btn {
     background-color: rgb(226, 70, 70);
     padding: 5px;

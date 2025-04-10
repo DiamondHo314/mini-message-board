@@ -10,8 +10,8 @@
    <h1 id="heading"> <%= title %></h1> 
    <div id="board">
         <% messages.forEach((msg) => { %>  
-                <% msgUser = msg.user %>
-                <a id="messageFrom" href="/messageDetails/<%= msgUser %>"> from <%= msg.user %> </a>
+                <% msgUser = msg.username %>
+                <a id="messageFrom" href="/messageDetails/<%= msgUser %>"> from <%= msg.username %> </a>
                 <br>
         <% }) %>
    </div>

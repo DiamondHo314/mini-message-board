@@ -27,6 +27,6 @@ app.use('/', indexRouter)
 app.use('/form', formRouter)
 app.use('/messageDetails', detailrouter)
 
-app.listen(3000, () =>{
-    console.log('server listening on port 3000..')
+app.listen(8080, () =>{
+    console.log('server listening on port 8080..')
 })
