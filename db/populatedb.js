@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS message_info (
 INSERT INTO message_info (username, text, added) 
 VALUES
   ('vi', 'hellloo cupcakee', '14 February 2025, 2:00am'),
-  ('mongoose', 'i am leader of haus kiramman call me momma', '14 February 2025, 2:01am');
+  ('mongoose', 'i am leader of haus kiramman', '14 February 2025, 2:01am');
 `;
 
 async function main() {
